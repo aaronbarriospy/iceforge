@@ -1,6 +1,6 @@
-from dominio import PinguinoIngeniero, PinguinoGuerrero, PinguinoExplorador
-# explicacion: importo mis clases hijas desde mi archivo dominio.py.
-# por que?: mi motor necesita conocer los moldes para instanciar a mi equipo de pinguinos al inicio.
+from dominio.pingu_inge import PinguinoIngeniero
+from dominio.pingu_guerr import PinguinoGuerrero
+from dominio.pingu_exp import PinguinoExplorador
 
 class Game:
     # explicacion: esta es la clase game, el motor que coordina todo mi sistema.
@@ -20,9 +20,9 @@ class Game:
         # explicacion: creo la bandera booleana que mantendra vivo mi game loop.
 
         self.__equipo = [
-            PinguinoIngeniero("tux", 100, 20),
-            PinguinoGuerrero("skipper", 100, 30),
-            PinguinoExplorador("kowalski", 100, 15)
+            PinguinoIngeniero("kowalski", 100, 20),
+            PinguinoGuerrero("rico", 100, 30),
+            PinguinoExplorador("cabo", 100, 15)
         ]
         # explicacion: instancio a mis pinguinos y los agrupo en una lista privada aplicando polimorfismo.
 
